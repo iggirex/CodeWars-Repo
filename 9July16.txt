@@ -1,0 +1,9 @@
+Given an input n, write a function always that returns a function which returns n.
+
+// return a function that returns n
+function always (n) {
+  function woopWoop(){
+    return n;
+    }
+  return woopWoop();
+}
