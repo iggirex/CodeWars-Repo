@@ -1,0 +1,16 @@
+Write a function to figure out if a year is a leap year.
+
+
+var nowYear = 1900;
+
+function checkLeap (year){
+	if(year%4 === 0){
+		if(year%100 === 0 && year%400 !== 0){
+			console.log("not a leap year");
+		}
+	} else {
+		console.log("leap year");
+	}
+}
+
+checkLeap(nowYear);
