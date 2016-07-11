@@ -1,0 +1,9 @@
+Write a function listToArray (or list_to_array in Python) that converts a list to an array, like this:
+
+[1, 2, 3]
+
+function listToArray(list) {
+  //write your code here
+
+    return [list.value, list.next.value, list.next.next.value];
+}
