@@ -1,0 +1,21 @@
+Generate two random integers and print their mean and variance
+
+
+
+
+-------------MY ANSWER-------------------
+
+var rando = [Math.floor(Math.random()*101), Math.floor(Math.random()*101)]
+
+//console.log(rando);
+
+var mean = Math.floor((rando[0] + rando[1])/2);
+//console.log(mean);
+
+var once = (rando[0]-mean)*(rando[0]-mean);
+var twice = (rando[1]-mean)*(rando[1]-mean);
+var variance = (once+twice)/2;
+console.log(variance);
+
+var deviation = Math.sqrt(variance);
+console.log(deviation);
