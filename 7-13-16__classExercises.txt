@@ -1,0 +1,88 @@
+* Define a function called `sum` that takes two numbers as arguments and returns their sum.*/
+
+function sum(x,y) {
+	return x * y;
+}
+
+/*1. Define a function called `isEqual` that takes two arguments and returns a boolean. Return true if the two arguments are equal and return false if they are not.*/
+
+function isEqual(x,y) {
+	if(x===y){
+		return true
+	} else {
+		return false
+	}
+}
+
+/*1. Define a function called `discountPercentage` that returns the total discount ($), given the original amount and discount percentage (as arguments). Return a warning if the discount amount is greater than 100 or less that 0 percent.*/
+
+function discountPercentage(x,y){
+	var price = x;
+	var dis = y;
+	if(y>100) {
+		return "warning the discount amount is greater than 100"
+	} else {
+		return (dis/100)*price
+	}
+}
+
+
+/*1. Define a function called `stringCapitalize` that takes a string as an argument and returns the same string with the first letter of each word capitalized. Assume that each individual word is separated by only one space.*/
+
+function stringCapitalize(str) {
+	var allDem = [];
+	var woop = str.split(" ");
+
+	for (var i=0;i<woop.length;i++){
+		var slice = woop[i].slice(1,woop[i].length)
+		allDem += woop[i][0].toUpperCase() + slice + " "
+	}
+	return allDem
+}
+
+stringCapitalize("Yo wadup is me")
+
+
+/*1. Define a function called `evenNumbers` that takes a random integer, from 0 to 100, and outputs all the even integers from 0 to that random number.*/
+
+function evenNumbers(x){
+	var numStore = [];
+
+		for (var i=0;i<x;i++){
+			if(i%2===0){
+			numStore.push(i);
+			}
+
+		}
+		console.log(numStore);
+}
+var randomNumber = (Math.floor(Math.random()*101));
+
+
+/*1. Define a function called `isDivisible` that takes two arguments and returns a boolean. Return true if the first argument is divisible by the second; otherwise, return false.*/
+
+function isDivisible(x,y){
+	if((x/y)%2===0) {
+		return true
+	} else {
+		return false;
+	}
+}
+
+//isDivisible(11,5)
+
+/*1. **Bonus**: Write a function called `oddNumbers` that takes a random integer, from 0 to 100. If the number is greater than 40 then output all the odd integers from 40 to the random number. If the number is less than 40, output all the odd integers from 0 to 40.*/
+
+var randomNumber2 = (Math.floor(Math.random()*101));
+
+function oddNumbers(x) {
+
+	if(x>40){
+		for(var i =0;i<x;i++){
+			if(i%2!==0){
+				console.log(i)
+			}
+		}
+	}
+}
+oddNumbers(randomNumber2)
