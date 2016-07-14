@@ -1,0 +1,90 @@
+/*1. Define a function called `oldestPerson` that takes an object with names as keys and ages as values (e.g., {'Chuck': 22, 'Brian': 46}), and then returns the name of the oldest living person.*/
+
+var greatest = 0;
+var oldPerson = "";
+function oldestPerson(x) {
+	for (var i in x) {
+
+		if(x[i]>greatest){
+			greatest = x[i]
+			oldPerson = i
+		}
+	}
+	console.log(greatest)
+	console.log(oldPerson)
+}
+var input = {
+	iggi:29,
+	danny:27,
+	lane:20,
+	bartholomew:28
+}
+oldestPerson(input)
+
+/*1. Define a function called `longestWord` that takes a string and returns the longest word in the string.*/
+
+var longest = "";
+function longestWord (x) {
+	var arr = x.split(' ');
+
+	for (var j=0;j<arr.length;j++){
+
+		if(arr[j].length > longest.length){
+			longest = arr[j]
+		}
+	}
+	console.log(longest)
+}
+
+var words = "CAt dog woop ignacioAguerrevere up in that housey"
+longestWord(words)
+
+/*1. Refactor the `longestWord` function so that it ignores punctuation.*/
+
+var longest = "";
+function longestWord (x) {
+
+	var arr = x.split(' ');
+
+	for (var j=0;j<arr.length;j++){
+		arr[j] = arr[j].replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"")
+
+		if(arr[j].length > longest.length){
+			longest = arr[j]
+		}
+	}
+	console.log(longest)
+}
+
+var words = "CAt dog woop igna.-cioAguerrevere up in that housey"
+longestWord(words)
+
+/*1. Define a function called `factorial` that takes a random number as an argument and then returns the factorial of that given number.
+var rando = Math.floor(Math.random()*11);*/
+
+var nu = 1;
+
+function factorial(x){
+	counter =x;
+	while(counter>0){
+		nu = nu*counter;
+		counter--;
+		x-1
+	}
+	console.log(nu)
+}
+factorial(rando)
+
+/*
+1. **Bonus**: Write a function called `palindrome` that takes a string as an argument and returns the string in reversed order. Return true if the string is the same as the reversed string, otherwise return false.*/
+
+function palindrome (x) {
+	 var o = "";
+  for (var i =x.length ;i>=0;i--){
+  	o += x[i];
+
+  }
+console.log(o)
+}
+var input = "yo this is a string"
+palindrome(input);
