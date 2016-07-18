@@ -1,0 +1,43 @@
+var vietnameseFoods = ['Pho', 'Dong Khan', 'Bahn Mi', 'Bun', 'Boba Tea'];
+
+
+// vietnameseFoods.forEach(function(element, i, arr){
+//   console.log('element is ', element);
+//   console.log('index is ', i);
+//   console.log('array is ', arr)
+// });
+
+// function forEach(arr, fn){
+// 	for(var i =0;i<arr.length;i++){
+// 		fn(arr[i], i, arr);
+// 	}
+// }
+
+// forEach(vietnameseFoods, function(elem, i, arr){
+// 	console.log('element is ', elem);
+//   console.log('index is ', i);
+//   console.log('array is ', arr)
+// })
+
+
+// filter takes an array and a callback function that will be called for each element. f the callback function returns truthy, keep the element, otherwise don't.
+
+/*function filter(arr, callback){
+	var nuArr =[];
+	for(var i=0;i<arr.length;i++){
+		var elem = arr[i];
+		var trueorfalse = callback(elem, i, arr);
+		if(trueorfalse === true){
+			nuArr.push(elem)
+		}
+	}
+	return nuArr;
+}
+
+var demArrays = filter(vietnameseFoods, function(elem, i, arr){
+	if(elem[0] === "B"){
+	return true
+	}
+})
+console.log(demArrays)
+*/
