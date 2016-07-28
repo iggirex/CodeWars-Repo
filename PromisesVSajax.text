@@ -1,0 +1,24 @@
+// OLD WAY
+$.ajax({
+  url: "https://pokeapi.co/api/v2/pokemon/1",
+  success: function (data) {
+    $.ajax({
+      url: data.abilities[0].ability.url,
+      success: function (ability) {
+        console.log(ability)
+      },
+      method: "GET"
+    })
+  },
+  method: "GET"
+})
+
+// NEW WAY
+$.get("https://pokeapi.co/api/v2/pokemon/1")
+.then(function (pokemon) {
+  return $.get(pokemon.abilities[0].ability.url)
+})
+.then(function (ability) {
+  console.log(ability)
+  console.log("hello")
+})
