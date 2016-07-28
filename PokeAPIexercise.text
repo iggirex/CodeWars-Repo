@@ -1,0 +1,75 @@
+// Using the PokeAPI https://pokeapi.co/
+// jQuery 3 is already included
+// $.get("https://pokeapi.co/api/v2/pokemon/1")
+// .then(function (data) {console.log(data);});
+
+
+
+// Do these exercises
+
+
+
+// Retrieve the data for the pokemon with id 1
+// Hint: Add a ".catch" and console.log if you want to see errors.
+
+$.get("https://pokeapi.co/api/v2/pokemon/1", function (data){
+  return data.abilities[0].ability.url
+})
+
+
+Using the previous Promise, continue the "then" chain and get details
+on one of Bulbasaur's moves
+
+$.get("https://pokeapi.co/api/v2/pokemon/1")
+.then(function (bulb){
+$.get(bulb.moves[0].move.url)
+.then(function(data2){
+$.get(data2.contest_effect.url)
+.then(function(data3){
+$.get(data3.effect_entries[0].language.url)
+.then(function(data4){
+$.get(data4.names[0].language.url)
+.then(function(data4){
+$.get(data4.names[0].language.url)
+.then(function(data5){
+$.get(data5.names[1].language.url)
+.then(function(data6){
+console.log(data6.names[0].name)
+// .then(function(data7){
+// console.log(data7)
+// })
+})
+})
+})
+})
+})
+})
+})
+
+// Create a function that returns a promise that
+// retrieves the data of a Pokemon with an id generated randomly between 1-150
+
+var rando = Math.floor(Math.random()*150);
+
+$.get("https://pokeapi.co/api/v2/pokemon/"+rando)
+.then(function(bulb){
+  console.log(bulb.name)
+})
+
+// Stretch: Use "Promise.all" to fetch the first 10 pokemons' data
+// and get all the results in a single ".then"
+
+Promise.all([
+  $.get("https://pokeapi.co/api/v2/pokemon/1"),
+  $.get("https://pokeapi.co/api/v2/pokemon/2"), 
+  $.get("https://pokeapi.co/api/v2/pokemon/3"),
+  $.get("https://pokeapi.co/api/v2/pokemon/4"),
+  $.get("https://pokeapi.co/api/v2/pokemon/5"),
+  $.get("https://pokeapi.co/api/v2/pokemon/6"),
+  $.get("https://pokeapi.co/api/v2/pokemon/7"),
+  $.get("https://pokeapi.co/api/v2/pokemon/8"),
+  $.get("https://pokeapi.co/api/v2/pokemon/9"),
+  $.get("https://pokeapi.co/api/v2/pokemon/10"),
+]).then(function(allTheMons){
+console.log(allTheMons)
+})
