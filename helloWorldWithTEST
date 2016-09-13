@@ -1,0 +1,13 @@
+Make a simple function called greet that returns the most-famous "hello world!".
+
+
+
+function greet(){
+  return "Hello World!"
+  }
+
+  describe("Solution", function(){
+  it("should test for string Hello World", function(){
+    Test.assertEquals(greet(), "Hello World!", "This is just an example of how you can write your own TDD tests");
+  });
+});
