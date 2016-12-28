@@ -1,0 +1,6 @@
+function multiply(a,b){
+  return a * b
+}
+
+
+Test.assertEquals(howManyLightsabersDoYouOwn(dude), 0)
