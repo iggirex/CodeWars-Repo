@@ -1,0 +1,26 @@
+function rando(){
+  return Math.floor(Math.random() * 4)
+}
+
+function color(){
+  switch(rando()){
+  case 0: 
+    return "white"
+    break;
+  case 1: 
+    return "red"
+    break;
+  case 2: 
+    return "purple"
+    break;
+  case 3: 
+    return "yellow"
+    break;
+  }
+}
+
+var Ghost = function() {
+  this.color = color()
+};
+var me = new Ghost()
+me.color
