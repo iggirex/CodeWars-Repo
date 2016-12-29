@@ -6,3 +6,13 @@ function smash (words) {
     })
     return sentence;
 };
+
+
+-------->
+
+
+// Smash Words
+function smash (words) {
+    "use strict";
+    return words.join(" ")
+};
