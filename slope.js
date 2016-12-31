@@ -10,3 +10,9 @@ function slope(points){
 if( points[2] - points[0] === 0) return "undefined";
 return  (points[3] - points[1]) / (points[2] - points[0]) + "";
 }
+
+------------------------------------>
+
+function slope(points){
+  return points[2] - points[0] === 0 ? "undefined" : (points[3] - points[1]) / (points[2] - points[0]) + "";
+}
