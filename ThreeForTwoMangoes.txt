@@ -1,0 +1,21 @@
+There's a 3 for 2 offer on mangoes. For a given price and quantity, calculate the total cost of the mangoes.
+
+
+function mango(quantity, price){
+  var deal;
+  var rest;
+  rest = quantity % 3;
+  deal = quantity - rest;
+  deal = deal / 3;
+  dealPrice = (deal * 2 * price) + (rest * price);
+  return dealPrice;
+}
+
+------------------>
+
+
+function mango(quantity, price){
+  var rest = quantity % 3;
+  var deal = quantity - rest;
+  return ((deal / 3) * 2 * price) + (rest * price);
+}
