@@ -1,0 +1,19 @@
+Given and array of integers (x), return the result of multiplying the values together in order. Example:
+
+[1, 2, 3] --> 6
+
+
+function grow(x){
+  var result = 1;
+  x.forEach(function(val){
+    console.log(result, val);
+    result *= val
+    console.log(result)
+  })
+  return result
+}
+
+
+--------------->
+
+const grow=x=> x.reduce((a,b) => a*b);
