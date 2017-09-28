@@ -1,0 +1,8 @@
+Array.prototype.filter = function(x){
+console.log(x)
+  var results = [];
+  this.forEach(function(ele){
+      if(x(ele)){ results.push(ele)}
+  })
+  return results;
+}
